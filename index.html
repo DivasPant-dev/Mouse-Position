@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position of your Mouse</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        .display {
+            margin-top: 200px;
+            font-size: 2.5rem;
+        }
+
+        .ex {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        You can see your mouse position here
+    </h1>
+    <p class="ex">
+        For ex - Pos = x-y
+    </p>
+
+    <p class="display">
+        hola
+    </p>
+
+
+    <script>
+        document.addEventListener("mousemove", (event)=> {
+            const posX = event.pageX;
+            const posY = event.pageY;
+            const display = document.querySelector(".display");
+
+            display.innerHTML = `Pos = ${posX}-${posY}`;
+        });
+    </script>
+</body>
+</html>
